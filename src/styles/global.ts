@@ -1,4 +1,5 @@
 import { createGlobalStyle, DefaultTheme, GlobalStyleComponent } from 'styled-components';
+import { theme } from 'styled-tools';
 
 type GlobalStylesProps = {
   //
@@ -6,6 +7,7 @@ type GlobalStylesProps = {
 
 const GlobalStyles: GlobalStyleComponent<GlobalStylesProps, DefaultTheme> = createGlobalStyle`
   * {
+    font-family: 'Signika', sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,13 +23,14 @@ const GlobalStyles: GlobalStyleComponent<GlobalStylesProps, DefaultTheme> = crea
   #__next {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c8c3c2;
   }
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 65px;
-  }
-  body {
-    font-family: "Montserrat", sans-serif;
   }
 `;
 

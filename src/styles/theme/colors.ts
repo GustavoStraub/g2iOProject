@@ -130,7 +130,7 @@ const secondary = {
 };
 
 const grayscale = {
-  white: '#F3F3F3',
+  white: '#DDDDDE',
   black: '#252525',
   lightGray: '#A3A3A3',
   darkGray: '#606060',
@@ -152,6 +152,9 @@ const colors = {
   tifanny,
   secondary,
   grayscale,
+  lightPurple: '#5b518a',
+  purple: '#423778',
+  gold: '#ac9477',
 };
 
 export default colors;

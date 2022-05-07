@@ -6,10 +6,7 @@ module.exports = (plop) => {
         type: 'list',
         name: 'folder',
         message: 'What is your component folder?',
-        choices: [
-          'complex',
-          'simple',
-        ],
+        choices: ['complex', 'simple'],
       },
       {
         type: 'input',
