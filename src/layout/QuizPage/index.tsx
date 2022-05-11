@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import React, { useState } from 'react';
 
-import { RadioButton } from 'components/complex/RadioButton';
+import { RadioButtons } from 'components/complex/RadioButtons';
 import { Box } from 'components/simple/Box';
 import { Button } from 'components/simple/Button';
 import { Text } from 'components/simple/Text';
@@ -30,8 +30,6 @@ export function QuizPage() {
 
   function handleAnswer() {
     handleQuestionChange();
-    console.log('GABARITO: ', currentAnswer, currentQuestion.correct_answer);
-    console.log(currentAnswer === currentQuestion.correct_answer);
     insertResult({
       correctAnswer: currentAnswer === currentQuestion.correct_answer,
       question: currentQuestion.question,
@@ -60,10 +58,13 @@ export function QuizPage() {
           <Text height="10rem" fontSize="1.5rem" as="p">
             {currentQuestion?.question}
           </Text>
-          <RadioButton value={currentAnswer} onChange={(e) => setCurrentAnswer(e.target.value)} />
+          <RadioButtons
+            value={currentAnswer}
+            onChange={(e: { target: HTMLInputElement }) => setCurrentAnswer(e.target.value)}
+          />
         </Box>
 
-        <Button onClick={handleAnswer} title="NEXT" />
+        <Button disabled={!currentAnswer} onClick={handleAnswer} title="NEXT" />
       </Box>
     </Box>
   );

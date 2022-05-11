@@ -24,10 +24,14 @@ export default function ResultPage() {
   return (
     <>
       <Title>
-        <Text textAlign="center" color="white" fontSize="2rem" as="p">
-          You Scored <br />
-          {rightAnswers}/{totalItems}
-        </Text>
+        <Box>
+          <Text textAlign="center" color="white" fontSize="2rem" as="p">
+            You Scored
+          </Text>
+          <Text textAlign="center" color="white" fontSize="2rem" as="p">
+            {rightAnswers}/{totalItems}
+          </Text>
+        </Box>
       </Title>
       <Box overflow="auto" height="calc(100% - 13.6rem)">
         {results.map((result) => (

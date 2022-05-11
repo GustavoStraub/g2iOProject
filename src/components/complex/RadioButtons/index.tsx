@@ -23,7 +23,7 @@ const defaultOptions = [
   },
 ];
 
-export function RadioButton({ options = defaultOptions, ...props }: RadioButtonProps) {
+export function RadioButtons({ options = defaultOptions, ...props }: RadioButtonProps) {
   return (
     <S.Wrapper>
       <Radio.Group {...props}>

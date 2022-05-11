@@ -1,6 +1,6 @@
 {
-  "name": "strider-takehome",
-  "description": "Marcos Nunes - Strider",
+  "name": "g2i-takehome",
+  "description": "Gustavo Straub - G2I",
   "version": "0.0.1",
   "eslintConfig": {
     "extends": "react-app"

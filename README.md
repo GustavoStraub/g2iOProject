@@ -78,3 +78,11 @@ The following aspects were used to create the folder structure
     {filename}.tsx                  # some file with API connection and calls
     ...
 ```
+
+## Considerations
+
+Since this is just a simple client side project, all API calls, and states are built inside components in layout. This can be improved to server side with some next features when doing this api calls in the page directly, making the application much faster and lighweight for the client.
+Also, using this approach makes the layout much harder to test later on, which all values are supposed to be received by props.
+
+I used the component based design because that makes the process to create a lot faster and also an easy integration with themes, which is great when you want to scale the project, since we could change all colors of the project with a single file.
+

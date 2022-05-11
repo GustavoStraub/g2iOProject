@@ -15,4 +15,8 @@ export const Button = styled(Box)`
   :hover {
     filter: brightness(1.1);
   }
+  :disabled {
+    filter: brightness(0.8);
+    cursor: not-allowed;
+  }
 `;
