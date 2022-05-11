@@ -4,17 +4,19 @@ import React from 'react';
 import { Box } from 'components/simple/Box';
 import { Button } from 'components/simple/Button';
 import { Text } from 'components/simple/Text';
+import { Title } from 'components/simple/Title';
 
 export function HomePage() {
   const { push } = useRouter();
 
   return (
     <Box height="100%" display="flex" flexDirection="column">
-      <Box borderRadius="sm" p="1rem" backgroundColor="lightPurple">
-        <Text color="white" fontSize="2rem" as="p">
-          Welcome to the <br /> Trivia Challenge!
+      <Title>
+        <Text textAlign="center" color="white" fontSize="2rem" as="p">
+          Welcome to the Trivia Challenge!
         </Text>
-      </Box>
+      </Title>
+
       <Box flex="1" p="1rem" display="flex" flexDirection="column" justifyContent="space-between">
         <Box flex="1" display="flex" flexDirection="column" justifyContent="space-evenly">
           <Text fontSize="1.5rem" as="p">

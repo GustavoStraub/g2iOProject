@@ -1,5 +1,5 @@
-import { Radio } from 'antd';
-import React, { useState } from 'react';
+import { Radio, RadioGroupProps } from 'antd';
+import React from 'react';
 
 import * as S from './styles';
 
@@ -7,20 +7,26 @@ export type options = {
   value: string | number | boolean;
   label: string;
 };
-export type RadioButtonProps = {
-  options: options[];
-};
+export interface RadioButtonProps extends RadioGroupProps {
+  options?: options[];
+  onChange: (e: any) => void;
+}
 
-export function RadioButton({ options }: RadioButtonProps) {
-  const [value, setValue] = useState(1);
+const defaultOptions = [
+  {
+    value: 'True',
+    label: 'True',
+  },
+  {
+    value: 'False',
+    label: 'False',
+  },
+];
 
-  const onChange = (e: Event) => {
-    console.log('radio checked', e.target.value);
-    setValue(e.target.value);
-  };
+export function RadioButton({ options = defaultOptions, ...props }: RadioButtonProps) {
   return (
     <S.Wrapper>
-      <Radio.Group onChange={onChange}>
+      <Radio.Group {...props}>
         {options.map((options) => (
           <Radio.Button key={options.label} value={options.value}>
             {options.label}

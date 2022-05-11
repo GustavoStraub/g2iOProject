@@ -18,6 +18,27 @@ const GlobalStyles: GlobalStyleComponent<GlobalStylesProps, DefaultTheme> = crea
       box-sizing: inherit;
     }
   }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: ${theme('colors.grayscale.lightGray')};
+  border-radius: 1rem;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: ${theme('colors.purple')};
+  border-radius: 1rem;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: ${theme('colors.lightPurple')};
+}
   html,
   body,
   #__next {
@@ -31,6 +52,9 @@ const GlobalStyles: GlobalStyleComponent<GlobalStylesProps, DefaultTheme> = crea
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 65px;
+  }
+  h1, h2, h3, h4, h5, p{
+    word-break: break-word;
   }
 `;
 

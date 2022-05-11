@@ -21,7 +21,6 @@ export default function useFetch<Data = any, Error = IError | any>(
       return response.data;
     },
     {
-      revalidateOnMount: false,
       revalidateOnFocus: false,
       errorRetryCount: 3,
       fallbackData: fallbackData,

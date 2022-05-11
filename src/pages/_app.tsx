@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 
 import Wrapper from 'components/simple/Wrapper';
+import { ResultProvider } from 'providers/ResultContext';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 
@@ -18,7 +19,9 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Wrapper>
-        <Component {...pageProps} />
+        <ResultProvider>
+          <Component {...pageProps} />
+        </ResultProvider>
       </Wrapper>
     </ThemeProvider>
   );
